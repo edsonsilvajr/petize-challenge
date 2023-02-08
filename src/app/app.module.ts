@@ -9,9 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserCardInfoComponent } from './components/user-card-info/user-card-info.component';
+import { RepoCardComponent } from './components/repo-card/repo-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PerfilComponent],
+  declarations: [AppComponent, HomeComponent, PerfilComponent, UserCardInfoComponent, RepoCardComponent],
   imports: [
     BrowserModule,
     FormsModule,
