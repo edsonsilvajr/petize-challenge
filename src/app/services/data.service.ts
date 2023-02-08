@@ -8,11 +8,11 @@ export class DataService {
 
   constructor() {}
 
-  setData(data: any) {
+  public setData(data: any) {
     this._data = data;
   }
 
-  getData(data: any) {
+  public getData() {
     return this._data;
   }
 }
