@@ -22,7 +22,7 @@ export class HomeComponent {
     this._gitService.getUser(this.searchTerm).subscribe({
       next: (result) => {
         console.log(result);
-        this._userData.setDate(result);
+        this._userData.setData(result);
         this._router.navigate(['/perfil']);
       },
       error: ({ error }) => {
