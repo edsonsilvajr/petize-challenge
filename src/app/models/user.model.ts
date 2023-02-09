@@ -3,9 +3,9 @@ export interface User {
   bio: string | null;
   company: string | null;
   email: string | null;
-  login: string | null;
-  followers: string | null;
-  following: string | null;
+  login: string;
+  followers: string;
+  following: string;
   name: string | null;
   twitter_username: string | null;
   location: string | null;

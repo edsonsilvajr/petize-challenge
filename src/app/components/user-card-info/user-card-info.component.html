@@ -6,17 +6,17 @@
       <p>@{{ data.login }}</p>
     </div>
   </div>
-  <div class="bio">
+  <div *ngIf="data.bio" class="bio">
     {{ data.bio }}
   </div>
   <div class="followers-section">
     <div>
       <img src="assets/followers-icon.svg" alt="followers-icon" />
-      <p>{{ data.followers ?? "---" }} seguidores</p>
+      <p>{{ data.followers }} seguidores</p>
     </div>
     <div>
       <img src="assets/following-icon.svg" alt="following-icon" />
-      <p>{{ data.following ?? "---" }} seguindo</p>
+      <p>{{ data.following }} seguindo</p>
     </div>
   </div>
   <div class="additional-info-section">
@@ -34,12 +34,32 @@
     </div>
     <div>
       <img src="assets/blog-icon.svg" alt="blog-icon" />
-      <p>{{ data.blog ?? "---" }}</p>
+      <p>
+        <a
+          [attr.href]="checkStringLength(data.blog) ? data.blog : null"
+          [ngClass]="{
+            clickable: checkStringLength(data.blog)
+          }"
+          >{{ data.blog ?? "---" }}</a
+        >
+      </p>
     </div>
     <div>
       <img src="assets/twitter-icon.svg" alt="twitter-icon" />
-      <p>{{ data.twitter_username ?? "---" }}</p>
+      <p>
+        <a
+          [attr.href]="
+            checkStringLength(data.twitter_username)
+              ? data.twitter_username
+              : null
+          "
+          [ngClass]="{
+            clickable: checkStringLength(data.twitter_username)
+          }"
+          >{{ data.twitter_username ?? "---" }}</a
+        >
+      </p>
     </div>
   </div>
 </div>
-<button class="input-button">contact</button>
+<button *ngIf="data" class="input-button">Contato</button>

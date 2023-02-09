@@ -8,4 +8,8 @@ import { User } from './../../models/user.model';
 })
 export class UserCardInfoComponent {
   @Input() data: User | null = null;
+
+  checkStringLength(field: string | null) {
+    return field && field.length > 0;
+  }
 }

@@ -2,6 +2,13 @@ button {
   width: 100%;
   height: 48px;
   margin-top: 24px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.7px;
+}
+
+a {
+  cursor: default;
 }
 
 .user-name-info-container {
@@ -23,7 +30,7 @@ button {
 }
 
 .user-name-info h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .user-name-info p {
@@ -33,14 +40,26 @@ button {
 
 .user-card {
   background-color: white;
-  padding: 12px;
+  padding: 1rem;
   border-radius: 4px;
 }
 
-.followers-section,
+.followers-section {
+  margin-top: 24px;
+  padding: 4px;
+  color: #4a5568;
+}
+
 .additional-info-section {
   margin-top: 24px;
   padding: 4px;
+  color: #4a5568;
+}
+
+.bio {
+  margin-top: 24px;
+  padding: 4px;
+  color: #4a5568;
 }
 
 .followers-section > div,
@@ -53,4 +72,8 @@ button {
 .additional-info-section > div > img {
   width: 24px;
   margin-right: 4px;
+}
+
+.clickable {
+  cursor: pointer;
 }
