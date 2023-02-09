@@ -1,2 +1,4 @@
-<app-user-card-info/>
-<app-repo-card/>
+<app-user-card-info [data]="userData"/>
+<ng-container *ngFor="let repo of userRepos">
+  <app-repo-card [repo]="repo"/>
+</ng-container>
