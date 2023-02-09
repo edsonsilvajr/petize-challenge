@@ -14,14 +14,21 @@ import { RepoCardComponent } from './components/repo-card/repo-card.component';
 import { InputComponent } from './components/UI/input/input.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PerfilComponent, UserCardInfoComponent, RepoCardComponent, InputComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    PerfilComponent,
+    UserCardInfoComponent,
+    RepoCardComponent,
+    InputComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({ positionClass: 'toast-bottom-center' }),
   ],
   providers: [],
   bootstrap: [AppComponent],
