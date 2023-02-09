@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito&display=swap");
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+.page {
+  height: 100vh;
+  width: 100vw;
 }
