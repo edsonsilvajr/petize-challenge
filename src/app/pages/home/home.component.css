@@ -21,3 +21,35 @@
   width: 74%;
   border-radius: 6px;
 }
+
+@media (max-width: 600px) {
+  .input-button {
+    display: none;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .search-container {
+    width: 90%;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .input-button {
+    display: none;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 3.5rem;
+  }
+}
