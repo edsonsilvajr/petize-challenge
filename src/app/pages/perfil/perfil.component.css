@@ -1,0 +1,28 @@
+.profile-page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.info-container {
+  background-color: #fcfcfc;
+  height: calc(100% - 67px);
+  padding: 100px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 48px;
+  grid-row-gap: 0px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.user-info-container {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.user-repos-container {
+  grid-area: 1 / 2 / 2 / 4;
+}

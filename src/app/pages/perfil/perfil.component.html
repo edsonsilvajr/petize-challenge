@@ -1,8 +1,8 @@
-<header>
-  <h2>Search d_evs</h2>
+<header class="profile-page-header">
+  <h1 class="logo" [routerLink]="'/'">Search <span>d_evs</span></h1>
   <input type="text" [value]="userData.name" />
 </header>
-<div>
+<div class="info-container">
   <div class="user-info-container">
     <app-user-card-info [data]="userData"></app-user-card-info>
   </div>
