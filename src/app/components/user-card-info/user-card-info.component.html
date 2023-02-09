@@ -2,8 +2,12 @@
   <div class="user-name-info-container">
     <img [src]="data.avatar_url" alt="" />
     <div class="user-name-info">
-      <h2>{{ data.name }}</h2>
-      <p>@{{ data.login }}</p>
+      <h2>{{ data.name ?? "Sem Nome Registrado" }}</h2>
+      <p>
+        <a [href]="'https://github.com/' + data.login" class="clickable"
+          >@{{ data.login }}</a
+        >
+      </p>
     </div>
   </div>
   <div *ngIf="data.bio" class="bio">
@@ -50,13 +54,13 @@
         <a
           [attr.href]="
             checkStringLength(data.twitter_username)
-              ? data.twitter_username
+              ? 'https://twitter.com/' + data.twitter_username
               : null
           "
           [ngClass]="{
             clickable: checkStringLength(data.twitter_username)
           }"
-          >{{ data.twitter_username ?? "---" }}</a
+          >@{{ data.twitter_username ?? "---" }}</a
         >
       </p>
     </div>
