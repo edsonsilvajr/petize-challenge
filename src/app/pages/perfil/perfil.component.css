@@ -1,19 +1,28 @@
 .profile-page-header {
   display: flex;
   width: 100%;
-  padding: 20px 50px;
+  padding: 20px 8rem;
+  position: relative;
 }
 
 .info-container {
   background-color: #fcfcfc;
-  height: calc(100% - 67px);
-  padding: 100px;
+  height: calc(100% - 83px);
+  padding: 4rem 8rem;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 48px;
   grid-row-gap: 0px;
+}
+
+.search-bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -25,4 +34,9 @@ h1 {
 }
 .user-repos-container {
   grid-area: 1 / 2 / 2 / 4;
+
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-y: auto;
 }
