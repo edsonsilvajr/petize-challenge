@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.profile-page-header > h1 {
+  cursor: pointer;
+}
+
 .info-container {
   background-color: #fcfcfc;
   height: calc(100% - 83px);
