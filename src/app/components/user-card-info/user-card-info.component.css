@@ -77,3 +77,7 @@ a {
 .clickable {
   cursor: pointer;
 }
+
+.clickable:hover {
+  color: #8c19d2;
+}

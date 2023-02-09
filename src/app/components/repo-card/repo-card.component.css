@@ -23,3 +23,7 @@ img {
 .title {
   font-size: 1.2rem;
 }
+
+.title:hover {
+  color: #8c19d2;
+}
