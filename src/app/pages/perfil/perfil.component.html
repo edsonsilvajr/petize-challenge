@@ -1,14 +1,17 @@
 <header class="profile-page-header">
   <h1 class="logo" [routerLink]="'/'">Search <span>d_evs</span></h1>
-  <input type="text" [value]="userData.name" />
+  <div class="search-bar">
+    <app-input [value]="userData ? userData.login : ''" #input></app-input>
+  </div>
 </header>
 <div class="info-container">
-  <div class="user-info-container">
+  <div *ngIf="userData" class="user-info-container">
     <app-user-card-info [data]="userData"></app-user-card-info>
   </div>
-  <div class="user-repos-container">
+  <div *ngIf="userRepos" class="user-repos-container">
     <ng-container *ngFor="let repo of userRepos">
       <app-repo-card [repo]="repo"></app-repo-card>
     </ng-container>
+    <p *ngIf="userRepos.length === 0">No repositories found for this user</p>
   </div>
 </div>

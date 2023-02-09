@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
+import { User } from './../models/user.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  private _data: any; //TODO: criar modelo
+  private _data: User | null = null;
 
   constructor() {}
 
-  public setData(data: any) {
+  public setData(data: User) {
     this._data = data;
   }
 
