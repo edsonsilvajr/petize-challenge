@@ -1,4 +1,10 @@
 <div class="search-container">
-  <input [(ngModel)]="value" type="text" placeholder="Search" #input />
+  <input
+    [(ngModel)]="value"
+    type="text"
+    placeholder="Search"
+    (keyup)="keyupListener($event)"
+    #input
+  />
   <img class="search-icon" src="assets/search-icon.svg" alt="Search Icon" />
 </div>

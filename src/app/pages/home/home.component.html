@@ -2,7 +2,7 @@
   <h1 class="logo">Search <span>d_evs</span></h1>
   <div class="search-container">
     <div class="input-field">
-      <app-input #input></app-input>
+      <app-input (enterKeyEvent)="search()" #input></app-input>
     </div>
     <button (click)="search()" class="input-button">Search</button>
   </div>
