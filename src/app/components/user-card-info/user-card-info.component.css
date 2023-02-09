@@ -95,8 +95,19 @@ a {
     display: flex;
   }
 
-  .followers-section:first-child {
+  .followers-section > div {
     margin-right: 1rem;
+  }
+
+  .additional-info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .additional-info-section > div {
+    width: fit-content;
+    margin: 2px;
   }
 
   button {
