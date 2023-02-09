@@ -1,4 +1,14 @@
-<app-user-card-info [data]="userData"/>
-<ng-container *ngFor="let repo of userRepos">
-  <app-repo-card [repo]="repo"/>
-</ng-container>
+<header>
+  <h2>Search d_evs</h2>
+  <input type="text" [value]="userData.name" />
+</header>
+<div>
+  <div class="user-info-container">
+    <app-user-card-info [data]="userData"></app-user-card-info>
+  </div>
+  <div class="user-repos-container">
+    <ng-container *ngFor="let repo of userRepos">
+      <app-repo-card [repo]="repo"></app-repo-card>
+    </ng-container>
+  </div>
+</div>
