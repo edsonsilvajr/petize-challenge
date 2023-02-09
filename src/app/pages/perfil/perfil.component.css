@@ -40,3 +40,16 @@ h1 {
   border-radius: 4px;
   overflow-y: auto;
 }
+
+@media (max-width: 900px) {
+  .profile-page-header {
+    display: none;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 100%;
+  }
+}

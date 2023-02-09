@@ -81,3 +81,25 @@ a {
 .clickable:hover {
   color: #8c19d2;
 }
+
+@media (max-width: 900px) {
+  .user-card {
+    background-color: #eaddff;
+  }
+
+  .user-name-info p {
+    color: #2d3748;
+  }
+
+  .followers-section {
+    display: flex;
+  }
+
+  .followers-section:first-child {
+    margin-right: 1rem;
+  }
+
+  button {
+    display: none;
+  }
+}
