@@ -1,1 +1,45 @@
-<h1>{{ data?.name }}</h1>
+<div *ngIf="data" class="user-card">
+  <div class="user-name-info-container">
+    <img [src]="data.avatar_url" alt="" />
+    <div class="user-name-info">
+      <h2>{{ data.name }}</h2>
+      <p>@{{ data.login }}</p>
+    </div>
+  </div>
+  <div class="bio">
+    {{ data.bio }}
+  </div>
+  <div class="followers-section">
+    <div>
+      <img src="assets/followers-icon.svg" alt="followers-icon" />
+      <p>{{ data.followers ?? "---" }} seguidores</p>
+    </div>
+    <div>
+      <img src="assets/following-icon.svg" alt="following-icon" />
+      <p>{{ data.following ?? "---" }} seguindo</p>
+    </div>
+  </div>
+  <div class="additional-info-section">
+    <div>
+      <img src="assets/company-icon.svg" alt="company-icon" />
+      <p>{{ data.company ?? "---" }}</p>
+    </div>
+    <div>
+      <img src="assets/location-icon.svg" alt="location-icon" />
+      <p>{{ data.location ?? "---" }}</p>
+    </div>
+    <div>
+      <img src="assets/email-icon.svg" alt="email-icon" />
+      <p>{{ data.email ?? "---" }}</p>
+    </div>
+    <div>
+      <img src="assets/blog-icon.svg" alt="blog-icon" />
+      <p>{{ data.blog ?? "---" }}</p>
+    </div>
+    <div>
+      <img src="assets/twitter-icon.svg" alt="twitter-icon" />
+      <p>{{ data.twitter_username ?? "---" }}</p>
+    </div>
+  </div>
+</div>
+<button class="input-button">contact</button>
