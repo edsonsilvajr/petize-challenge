@@ -11,9 +11,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserCardInfoComponent } from './components/user-card-info/user-card-info.component';
 import { RepoCardComponent } from './components/repo-card/repo-card.component';
+import { InputComponent } from './components/UI/input/input.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PerfilComponent, UserCardInfoComponent, RepoCardComponent],
+  declarations: [AppComponent, HomeComponent, PerfilComponent, UserCardInfoComponent, RepoCardComponent, InputComponent],
   imports: [
     BrowserModule,
     FormsModule,
