@@ -1,1 +1,10 @@
-<h1>{{ repo?.name }}</h1>
+<h1 class="title">
+  <a [href]="repo?.html_url">{{ repo?.name }}</a>
+</h1>
+<p class="description">{{ repo?.description }}</p>
+<footer>
+  <p class="footer-text">
+    <img src="assets/star-icon.svg" alt="star-icon" />
+    {{ repo?.stargazers_count }} • Atualizado {{ timeDiff }}
+  </p>
+</footer>

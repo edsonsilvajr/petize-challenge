@@ -1,0 +1,25 @@
+.footer-text {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  margin: 12px 0px;
+  color: #4a5568;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.description {
+  margin-top: 12px;
+  color: #4a5568;
+}
+
+.title {
+  font-size: 1.4rem;
+}
+
+img {
+  margin-left: -3px;
+  margin-right: 8px;
+}
