@@ -4,6 +4,7 @@ import { ToastrMessageService } from './../../services/toastr.service';
 import { Router } from '@angular/router';
 import { DataService } from './../../services/data.service';
 import { InputComponent } from './../../components/UI/input/input.component';
+import { User } from './../../models/user.model';
 
 @Component({
   selector: 'app-home',
@@ -25,8 +26,7 @@ export class HomeComponent {
     if (typeof this.searchTerm?.value === 'string') {
       this._gitService.getUser(this.searchTerm.value).subscribe({
         next: (result) => {
-          console.log(result);
-          this._userData.setData(result);
+          this._userData.setData(result as User);
           this._router.navigate(['/perfil']);
         },
         error: ({ error }) => {

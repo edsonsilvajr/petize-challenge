@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataService } from './../../services/data.service';
 import { GithubService } from './../../services/github.service';
+import { UserRepo } from './../../models/userRepo.model';
+import { InputComponent } from 'src/app/components/UI/input/input.component';
+import { Router } from '@angular/router';
+import { User } from './../../models/user.model';
 
 @Component({
   selector: 'app-perfil',
@@ -8,23 +12,35 @@ import { GithubService } from './../../services/github.service';
   styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent implements OnInit {
-  private _userData: any; //TODO: criar modelo
-  private _userRepos: any; //TODO: criar modelo
+  @ViewChild(InputComponent, { static: false })
+  searchTerm: InputComponent | null = null;
+
+  private _userData: User | null = null;
+  private _userRepos: UserRepo[] = [];
 
   constructor(
     private _dataService: DataService,
-    private _gitService: GithubService
+    private _gitService: GithubService,
+    private _router: Router
   ) {}
 
   ngOnInit() {
     this._userData = this._dataService.getData();
-    this._gitService.getUserRepos(this._userData?.login).subscribe({
-      next: (repos) => {
-        console.log(repos);
-        this._userRepos = repos;
-      },
-      error: () => {},
-    });
+    if (!this._userData) {
+      this._router.navigate(['/']);
+    } else {
+      this._gitService.getUserRepos(this._userData.login).subscribe({
+        next: (repos: Object) => {
+          this._userRepos = repos as UserRepo[];
+          if (this._userRepos.length > 1) {
+            this._userRepos = Array.from(this._userRepos as UserRepo[]).sort(
+              (a, b) => +b.stargazers_count - +a.stargazers_count
+            );
+          }
+        },
+        error: () => {},
+      });
+    }
   }
 
   get userData() {
