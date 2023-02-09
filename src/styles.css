@@ -8,6 +8,16 @@
   font-family: "Inter", sans-serif;
 }
 
+a {
+  all: unset;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #8c19d2;
+}
+
 body,
 html {
   height: 100%;
