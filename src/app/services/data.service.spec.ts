@@ -1,16 +1,20 @@
-import { TestBed } from '@angular/core/testing';
-
+import { User } from '../models/user.model';
 import { DataService } from './data.service';
 
 describe('DataService', () => {
   let service: DataService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(DataService);
+    service = new DataService();
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('should set data', () => {
+    const user = { name: 'edson' };
+    service.setData(user as User);
+    expect(service.getData()).toEqual(user as User);
+  });
+
+  it('should return null for data before it is set', () => {
+    expect(service.getData()).toBeNull();
   });
 });
