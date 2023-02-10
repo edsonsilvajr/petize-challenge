@@ -38,7 +38,7 @@ Execute `ng build` para compilar o projeto. Os artefatos de compilação serão 
 
 ## Justificando bibliotecas utilizadas
 
-- npx-toastr: excelente para notificar com um toastr quando um erro acontece, conveniente para chamadas a API's no geral, um contorno para evitar fazer validações em campos de input (apesar de não requisitado);
+- ngx-toastr: excelente para notificar com um toastr quando um erro acontece, conveniente para chamadas a API's no geral, um contorno para evitar fazer validações em campos de input (apesar de não requisitado);
 - CSS puro: Já fazia um tempo que eu não utilizava CSS puro para estilizar um projeto, então aproveitei essa oportunidade para dar uma refrescada nos conhecimentos, o layout foi feito de forma responsiva;
 - Separando as coisas: devido ao tempo a estrutura do projeto foi feita tentando separar o maximo possível as coisas, componentes na pasta de componentes, páginas nas páginas, elementos UI na pasta UI, tudo para deixar o código mais limpo, é uma estrutura na qual estou acostumado a trabalhar (devido ao fato de quanto maior o projeto, existem mais modulos, não foi o caso para esse projeto devido a simplicidade dele);
 - Importando ícones exportados do figma: Tomei a liberdade para exportar os icones em SVG para utilizar como os ícones da interface, para ser o mais fiel possível;
