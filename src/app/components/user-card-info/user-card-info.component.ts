@@ -10,6 +10,9 @@ export class UserCardInfoComponent {
   @Input() data: User | null = null;
 
   checkStringLength(field: string | null) {
-    return field && field.length > 0;
+    if (field) {
+      return field.length > 0;
+    }
+    return false;
   }
 }
