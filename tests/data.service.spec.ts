@@ -1,5 +1,5 @@
-import { User } from '../models/user.model';
-import { DataService } from './data.service';
+import { User } from '../src/app/models/user.model';
+import { DataService } from '../src/app/services/data.service';
 
 describe('DataService', () => {
   let service: DataService;

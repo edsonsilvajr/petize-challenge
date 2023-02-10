@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RepoCardComponent } from './repo-card.component';
+import { RepoCardComponent } from '../src/app/components/repo-card/repo-card.component';
 
 describe('RepoCardComponent', () => {
   let component: RepoCardComponent;
@@ -8,9 +8,8 @@ describe('RepoCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RepoCardComponent ]
-    })
-    .compileComponents();
+      declarations: [RepoCardComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RepoCardComponent);
     component = fixture.componentInstance;

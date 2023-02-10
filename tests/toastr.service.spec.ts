@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { ToastrService, ToastrModule } from 'ngx-toastr';
-import { ToastrMessageService } from './toastr.service';
+import { ToastrMessageService } from '../src/app/services/toastr.service';
 
 describe('ToastrMessageService', () => {
   let service: ToastrMessageService;

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserCardInfoComponent } from './user-card-info.component';
+import { UserCardInfoComponent } from '../src/app/components/user-card-info/user-card-info.component';
 
 describe('UserCardInfoComponent', () => {
   let component: UserCardInfoComponent;
@@ -8,9 +8,8 @@ describe('UserCardInfoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserCardInfoComponent ]
-    })
-    .compileComponents();
+      declarations: [UserCardInfoComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(UserCardInfoComponent);
     component = fixture.componentInstance;
