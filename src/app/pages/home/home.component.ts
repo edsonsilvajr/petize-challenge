@@ -26,7 +26,6 @@ export class HomeComponent {
     if (typeof this.searchTerm?.value === 'string') {
       this._gitService.getUser(this.searchTerm.value).subscribe({
         next: (result) => {
-          console.log(result, ':D');
           this._userData.setData(result as User);
           this._router.navigate(['/perfil']);
         },

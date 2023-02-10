@@ -5,6 +5,7 @@ import { UserRepo } from './../../models/userRepo.model';
 import { InputComponent } from 'src/app/components/UI/input/input.component';
 import { Router } from '@angular/router';
 import { User } from './../../models/user.model';
+import { ToastrMessageService } from './../../services/toastr.service';
 
 @Component({
   selector: 'app-perfil',
@@ -21,11 +22,16 @@ export class PerfilComponent implements OnInit {
   constructor(
     private _dataService: DataService,
     private _gitService: GithubService,
-    private _router: Router
+    private _router: Router,
+    private _toastrMessage: ToastrMessageService
   ) {}
 
   ngOnInit() {
     this._userData = this._dataService.getData();
+    this.repoSearch();
+  }
+
+  public repoSearch() {
     if (!this._userData) {
       this._router.navigate(['/']);
     } else {
@@ -39,6 +45,21 @@ export class PerfilComponent implements OnInit {
           }
         },
         error: () => {},
+      });
+    }
+  }
+
+  public search() {
+    if (typeof this.searchTerm?.value === 'string') {
+      this._gitService.getUser(this.searchTerm.value).subscribe({
+        next: (result) => {
+          this._dataService.setData(result as User);
+          this._userData = result as User;
+          this.repoSearch();
+        },
+        error: ({ error }) => {
+          this._toastrMessage.showMessage('error', error.message, 'Erro');
+        },
       });
     }
   }

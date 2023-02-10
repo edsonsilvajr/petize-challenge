@@ -17,6 +17,7 @@ import { of } from 'rxjs';
 import { RepoCardComponent } from 'src/app/components/repo-card/repo-card.component';
 import { UserCardInfoComponent } from 'src/app/components/user-card-info/user-card-info.component';
 import { UserRepo } from 'src/app/models/userRepo.model';
+import { ToastrModule } from 'ngx-toastr';
 
 describe('PerfilComponent', () => {
   let component: PerfilComponent;
@@ -35,6 +36,7 @@ describe('PerfilComponent', () => {
         HttpClientTestingModule,
         RouterTestingModule.withRoutes(routes),
         FormsModule,
+        ToastrModule.forRoot(),
       ],
       declarations: [
         PerfilComponent,
