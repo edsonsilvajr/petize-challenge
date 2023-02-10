@@ -12,8 +12,8 @@ import { User } from './../../models/user.model';
   styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent implements OnInit {
-  @ViewChild(InputComponent, { static: false })
-  searchTerm: InputComponent | null = null;
+  @ViewChild('input', { static: false })
+  searchTerm: InputComponent = new InputComponent();
 
   private _userData: User | null = null;
   private _userRepos: UserRepo[] = [];

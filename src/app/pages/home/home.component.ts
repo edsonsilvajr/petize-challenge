@@ -12,8 +12,8 @@ import { User } from './../../models/user.model';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  @ViewChild(InputComponent, { static: false })
-  searchTerm: InputComponent | null = null;
+  @ViewChild('input', { static: false })
+  searchTerm: InputComponent = new InputComponent();
 
   constructor(
     private _gitService: GithubService,
@@ -26,6 +26,7 @@ export class HomeComponent {
     if (typeof this.searchTerm?.value === 'string') {
       this._gitService.getUser(this.searchTerm.value).subscribe({
         next: (result) => {
+          console.log(result, ':D');
           this._userData.setData(result as User);
           this._router.navigate(['/perfil']);
         },
