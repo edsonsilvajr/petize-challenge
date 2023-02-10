@@ -30,7 +30,7 @@ Para instalar as dependências, basta rodar um `npm install` ao clonar esse proj
 
 ## Rodando ambiente de desenvolvimento
 
-Para iniciar o ambiente de desenvolvimento, deve-se primeiro instalar as dependências e então rodar `ng serve` ou `npm start`
+Para iniciar o ambiente de desenvolvimento, deve-se primeiro instalar as dependências e então rodar `ng serve` ou `npm start`, o mesmo irá redirecionar para `localhost:4200`, caso não redirecione, é possível acessar diretamente este endereço digitando `localhost:4200` na barra de URL.
 
 ## Rodar a build do projeto
 
