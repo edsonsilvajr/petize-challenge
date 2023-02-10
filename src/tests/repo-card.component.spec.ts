@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PerfilComponent } from '../src/app/pages/perfil/perfil.component';
+import { RepoCardComponent } from '../app/components/repo-card/repo-card.component';
 
-describe('PerfilComponent', () => {
-  let component: PerfilComponent;
-  let fixture: ComponentFixture<PerfilComponent>;
+describe('RepoCardComponent', () => {
+  let component: RepoCardComponent;
+  let fixture: ComponentFixture<RepoCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PerfilComponent],
+      declarations: [RepoCardComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PerfilComponent);
+    fixture = TestBed.createComponent(RepoCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

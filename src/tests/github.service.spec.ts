@@ -3,7 +3,7 @@ import {
   HttpClientTestingModule,
   HttpTestingController,
 } from '@angular/common/http/testing';
-import { GithubService } from '../src/app/services/github.service';
+import { GithubService } from '../app/services/github.service';
 
 describe('GithubService', () => {
   let service: GithubService;
