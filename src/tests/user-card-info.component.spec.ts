@@ -19,4 +19,14 @@ describe('UserCardInfoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return false', () => {
+    const result = component.checkStringLength('');
+    expect(result).toEqual(false);
+  });
+
+  it('should return true', () => {
+    const result = component.checkStringLength('aaaa');
+    expect(result).toEqual(true);
+  });
 });
