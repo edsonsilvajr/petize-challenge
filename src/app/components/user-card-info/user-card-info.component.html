@@ -5,7 +5,7 @@
       <h2>{{ data.name ?? "Sem Nome Registrado" }}</h2>
       <p>
         <a [href]="'https://github.com/' + data.login" class="clickable"
-          >@{{ data.login }}</a
+          >&#64;{{ data.login }}</a
         >
       </p>
     </div>
@@ -60,7 +60,7 @@
           [ngClass]="{
             clickable: checkStringLength(data.twitter_username)
           }"
-          >@{{ data.twitter_username ?? "---" }}</a
+          >&#64;{{ data.twitter_username ?? "---" }}</a
         >
       </p>
     </div>
